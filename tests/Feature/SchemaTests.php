@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Schema;
 afterEach(function () {
     try {
         DB::statement('DROP TYPE test_enum;');
-    } catch (Exception$e) {
+    } catch (Exception $e) {
     }
 });
 
@@ -24,7 +24,7 @@ test('create new enum with values', function () {
 test('create same enum twice', function () {
     Schema::createEnum('test_enum', ['one', 'two', 'three']);
     Schema::createEnum('test_enum', ['one', 'two', 'three']);
-})->expectExceptionObject(new PDOException('SQLSTATE[42710]: Duplicate object: 7 ERROR:  type "test_enum" already exists', 42710));
+})->throws(PDOException::class, 'SQLSTATE[42710]: Duplicate object: 7 ERROR:  type "test_enum" already exists', 42710);
 
 test('create same enum twice using createIfNotExists', function () {
     Schema::createEnum('test_enum', ['one', 'two', 'three']);

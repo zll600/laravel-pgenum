@@ -27,14 +27,14 @@
   "require": {
     "php": ">=8.1",
     "ext-pdo": "*",
-    "illuminate/database": "^9|^10|^11",
-    "illuminate/support": "^9|^10|^11"
+    "illuminate/database": "^11|^12",
+    "illuminate/support": "^11|^12"
   },
   "require-dev": {
-    "laravel/pint": "^1.15",
-    "orchestra/testbench": "^8.22",
-    "pestphp/pest": "^2.34",
-    "pestphp/pest-plugin-laravel": "^2.3"
+    "laravel/pint": "^v1.24.0",
+    "orchestra/testbench": "^v10.6.0",
+    "pestphp/pest": "^v4.0.4",
+    "pestphp/pest-plugin-laravel": "^v4.0.0"
   },
   "autoload-dev": {
     "psr-4": {

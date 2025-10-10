@@ -5,5 +5,5 @@ docker run --rm \
   -v "$(pwd):/var/www/html" \
   -w /var/www/html \
   -e COMPOSER_ALLOW_SUPERUSER=1 \
-  laravelsail/php81-composer:latest \
+  laravelsail/php83-composer:latest \
   composer $@
